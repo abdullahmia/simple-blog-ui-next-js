@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Author from '../common/author';
 
 const Slide = () => {
   return (
@@ -19,7 +20,7 @@ const Slide = () => {
                     Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
                     text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
                 </p>
-                <h1>author</h1>
+                <Author />
             </div>
         </div>
   )
