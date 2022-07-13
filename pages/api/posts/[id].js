@@ -1,6 +1,9 @@
 import data from "../data";
+import runMiddleware, { cors } from "../middleware";
 
-export default function handler (req, res) {
+
+export default async function handler (req, res) {
+    await runMiddleware(req, res, cors)
     const { id } = req.query;
     const { Posts } = data;
     if (id) {

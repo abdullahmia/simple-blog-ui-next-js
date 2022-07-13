@@ -10,7 +10,6 @@ const Post = () => {
     const {id} = router.query;
 
     const { isLoading, data } = fetcher(`/posts/${id}`)
-    console.log(data, isLoading)
 
     return (
     <Format>
