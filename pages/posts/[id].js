@@ -1,15 +1,21 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Author from '../../components/common/author'
+import Loader from '../../components/common/loader'
 import RelatedPost from '../../components/common/relatedPost'
 import Format from '../../components/layout/format'
 import fetcher from '../../lib/fetcher'
+
 
 const Post = () => {
     const router = useRouter();
     const {id} = router.query;
 
     const { isLoading, data } = fetcher(`/posts/${id}`)
+
+    if (isLoading) {
+        return <Loader />
+    }
 
     return (
     <Format>
