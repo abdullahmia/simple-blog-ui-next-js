@@ -11,6 +11,7 @@ const letestPost = () => {
             <Post />
             <Post />
             <Post />
+            <Post />
         </div>
     </section>
   )

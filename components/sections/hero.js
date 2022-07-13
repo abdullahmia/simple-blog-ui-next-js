@@ -14,7 +14,7 @@ const hero = () => {
   return (
     <section className="py-16" style={bgStyle}>
         <div className="container mx-auto md:px-20">
-            <h2 className="font-bold text-4xl pb-12 capitalize text-center">trending</h2>
+            {/* <h2 className="font-bold text-4xl pb-12 capitalize text-center">trending</h2> */}
            <Swiper
               spaceBetween={50}
               slidesPerView={1}
