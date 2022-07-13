@@ -2,7 +2,7 @@ import MiniPost from "../common/miniPost"
 
 const categoryPost = () => {
   return (
-        <section className="container mx-auto md:px-20 py-16">
+        <section className="container mx-auto md:px-20 py-16 px-6">
             <div className="grid lg:grid-cols-2 gap-7">
                 <div className="item">
                     <h1 className="font-bold py-12 text-xl">Buisness</h1>

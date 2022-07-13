@@ -4,8 +4,10 @@ import SwiperCore, { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
+import fetcher from '../../lib/fetcher';
 
 const hero = () => {
+  const {data} = fetcher('/trending')
   SwiperCore.use([Autoplay])
   const bgStyle = {
     background: "url('/images/banner.png') no-reapet",
@@ -22,9 +24,16 @@ const hero = () => {
                 delay: 2000
               }}
             >
-              <SwiperSlide>
-                <Slide />
-              </SwiperSlide>
+              {
+                data?.map((post, key) => (
+                  <>
+                    <SwiperSlide key={key}>
+                      <Slide post={post} />
+                    </SwiperSlide>
+                  </>
+                ))
+              }
+              
               <SwiperSlide>
                 <Slide />
               </SwiperSlide>
